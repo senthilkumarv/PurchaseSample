@@ -12,7 +12,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{EF7E3281-CD33-11D4-8326-00C04FA0CE8D}">
         <Files>
-		<File Path="ErrorSchema.xsd">
+		<File Path="PurchaseErrorMap.btm">
 			<ValidateTestMapInput>True</ValidateTestMapInput>
 			<ValidateTestMapOutput>True</ValidateTestMapOutput>
 			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
@@ -26,35 +26,7 @@
 			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
 			<AutoRefreshSchema>0</AutoRefreshSchema>
 		</File>
-		<File Path="PropertySchema.xsd">
-			<ValidateTestMapInput>True</ValidateTestMapInput>
-			<ValidateTestMapOutput>True</ValidateTestMapOutput>
-			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
-			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
-			<TestMapSourceType>0</TestMapSourceType>
-			<TestMapTargetType>0</TestMapTargetType>
-			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
-			<EditorInputInstanceFilename></EditorInputInstanceFilename>
-			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
-			<ValidateInstanceInputType>0</ValidateInstanceInputType>
-			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
-			<AutoRefreshSchema>0</AutoRefreshSchema>
-		</File>
-		<File Path="PurchaseRequest.xsd">
-			<ValidateTestMapInput>True</ValidateTestMapInput>
-			<ValidateTestMapOutput>True</ValidateTestMapOutput>
-			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
-			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
-			<TestMapSourceType>0</TestMapSourceType>
-			<TestMapTargetType>0</TestMapTargetType>
-			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
-			<EditorInputInstanceFilename></EditorInputInstanceFilename>
-			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
-			<ValidateInstanceInputType>0</ValidateInstanceInputType>
-			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
-			<AutoRefreshSchema>0</AutoRefreshSchema>
-		</File>
-		<File Path="PurchaseResponse.xsd">
+		<File Path="PurchaseFlowMap.btm">
 			<ValidateTestMapInput>True</ValidateTestMapInput>
 			<ValidateTestMapOutput>True</ValidateTestMapOutput>
 			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>

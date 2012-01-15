@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21107</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6B0394F6-7346-4C86-B1EC-9BB7080AC81F}</ProjectGuid>
+    <ProjectGuid>{59643EF1-1670-41A4-BDBA-E111A6403DB2}</ProjectGuid>
     <ProjectTypeGuids>{EF7E3281-CD33-11D4-8326-00C04FA0CE8D};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>library</OutputType>
     <GenericProcessing>true</GenericProcessing>
-    <RootNamespace>PurchaseOrchestrations</RootNamespace>
-    <AssemblyName>PurchaseOrchestrations</AssemblyName>
+    <RootNamespace>PurchaseMaps</RootNamespace>
+    <AssemblyName>PurchaseMaps</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <BpelCompliance>True</BpelCompliance>
   </PropertyGroup>
@@ -67,6 +67,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseErrorMap.btm.cs" />
+    <Compile Include="PurchaseFlowMap.btm.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="PurchaseErrorMap.btm">
+      <TypeName>PurchaseErrorMap</TypeName>
+      <Namespace>PurchaseMaps</Namespace>
+    </Map>
+    <Map Include="PurchaseFlowMap.btm">
+      <TypeName>PurchaseFlowMap</TypeName>
+      <Namespace>PurchaseMaps</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PurchaseSchemas\PurchaseSchemas.btproj">
+      <Project>{06C7D1B6-02F1-4BDE-9027-E808DD6C98F3}</Project>
+      <Name>PurchaseSchemas</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="PurchaseSample.snk" />
