@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 
 namespace PurchaseHelper
 {
-    class PurchaseRepository
+    public class PurchaseRepository
     {
         public Product GetProduct(uint productId)
         {
