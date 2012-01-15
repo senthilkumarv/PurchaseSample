@@ -1,0 +1,256 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="c85d77c7-43b2-4f20-8aa7-be57681a4fd9" LowerBound="1.1" HigherBound="59.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="PurchaseOrchestrations" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="ServiceDeclaration" OID="0052664e-b713-4c53-a439-316117169242" ParentLink="Module_ServiceDeclaration" LowerBound="25.1" HigherBound="58.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PurchaseOrchestartion" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="8b022fa0-6527-4cea-8cfd-557fccdde9f6" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="35.1" HigherBound="36.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="Error" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="validationError" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="9a93f3d3-e3c5-4e06-9529-79f0778e54f8" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="36.1" HigherBound="37.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="PurchaseHelper.PurchaseRequestValidator" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="purchaseRequestValidator" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="abc92c73-3bf3-4150-9a6d-b86b3a0196a4" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="32.1" HigherBound="33.1">
+                <om:Property Name="Type" Value="PurchaseSchemas.PurchaseRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PurchaseRequestMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="17afcc75-8943-463a-b313-1be63cbdafbe" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="33.1" HigherBound="34.1">
+                <om:Property Name="Type" Value="PurchaseSchemas.PurchaseResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PurchaseResponseMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="223832d6-3b0d-4ac9-bbaa-cbc22e781b2f" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="34.1" HigherBound="35.1">
+                <om:Property Name="Type" Value="PurchaseSchemas.ErrorSchema" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PurchaseErrorMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="b3dd3b12-868f-4a07-9372-0a1261ba263a" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="1572b6a2-61cc-479c-9abd-ff39d1d68036" ParentLink="ServiceBody_Statement" LowerBound="41.1" HigherBound="43.1">
+                    <om:Property Name="Activate" Value="False" />
+                    <om:Property Name="PortName" Value="PurchaseRequestRecievePort" />
+                    <om:Property Name="MessageName" Value="PurchaseRequestMessage" />
+                    <om:Property Name="OperationName" Value="Recieve" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="RecievePurchaseRequest" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="81effad4-48ae-4b01-a4ec-6d7af74e6b7e" ParentLink="ServiceBody_Statement" LowerBound="43.1" HigherBound="45.1">
+                    <om:Property Name="Expression" Value="validationError = purchaseRequestValidator.Validate(PurchaseRequestMessage);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Purchase Request Validation" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="Decision" OID="a609cb4d-debd-46c2-9276-c3622a869786" ParentLink="ServiceBody_Statement" LowerBound="45.1" HigherBound="56.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Validation" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="ab547e0b-b024-4f7c-af2c-baf5b08a2ad5" ParentLink="ReallyComplexStatement_Branch" LowerBound="46.13" HigherBound="51.1">
+                        <om:Property Name="Expression" Value="validationError != null" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Valid" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Call" OID="db732b49-e4b2-4d5c-ba6e-10e36c8b120b" ParentLink="ComplexStatement_Statement" LowerBound="48.1" HigherBound="50.1">
+                            <om:Property Name="Identifier" Value="CallOrchestration_1" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Process Request" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="b584ea6f-7217-4f24-9a91-5b7ef61d5126" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Invalid" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Send" OID="4d44e1e7-2d67-4123-a567-6369e75fbbe2" ParentLink="ComplexStatement_Statement" LowerBound="53.1" HigherBound="55.1">
+                            <om:Property Name="PortName" Value="PurchaseErrorResponseSendPort" />
+                            <om:Property Name="MessageName" Value="PurchaseErrorMessage" />
+                            <om:Property Name="OperationName" Value="SendError" />
+                            <om:Property Name="OperationMessageName" Value="Response" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="SendErrorResponse" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="b49f769e-4754-4a1c-b299-20a57f0d3987" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="28.1" HigherBound="30.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Unbound" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="PurchaseOrchestrations.PurchaseRequestRecievePortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PurchaseRequestRecievePort" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="f8a31e1d-52b8-4a6a-a4a4-f72cd4688e8f" ParentLink="PortDeclaration_CLRAttribute" LowerBound="28.1" HigherBound="29.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="be647340-b17b-4e16-8431-2fba0c260597" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="30.1" HigherBound="32.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="15" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="PurchaseOrchestrations.PurchaseErrorResponseSendPortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PurchaseErrorResponseSendPort" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="75036b81-099a-45f5-b832-17fa9896c687" ParentLink="PortDeclaration_CLRAttribute" LowerBound="30.1" HigherBound="31.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="c9a41836-c3c8-43ff-bc1a-b480d4339339" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PurchaseRequestRecievePortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="1efd37cb-e911-4590-ba39-77dfe81db3f3" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Recieve" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="175b9d8a-7e02-475f-b578-2989523b14c0" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.44">
+                    <om:Property Name="Ref" Value="PurchaseSchemas.PurchaseRequest" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="d6bde130-df9a-4c9f-9512-5215b7643912" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PurchaseSuccessResponseSendPortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="f7a9d557-619e-4803-aac2-ed2a84ef05ff" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendSuccess" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="99e74436-13ab-4ba8-a2db-6bfaff463f0b" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.45">
+                    <om:Property Name="Ref" Value="PurchaseSchemas.PurchaseResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="90ee083c-f28e-46b8-8e5f-f122bba01bcf" ParentLink="Module_PortType" LowerBound="18.1" HigherBound="25.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PurchaseErrorResponseSendPortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="07fbaa48-4b23-4ac3-be6a-6a2e9f1c873c" ParentLink="PortType_OperationDeclaration" LowerBound="20.1" HigherBound="24.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendError" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="9f1e041c-72d9-42f2-bd60-08cc97a38323" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="22.13" HigherBound="22.40">
+                    <om:Property Name="Ref" Value="PurchaseSchemas.ErrorSchema" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module PurchaseOrchestrations
+{
+    internal porttype PurchaseRequestRecievePortType
+    {
+        oneway Recieve
+        {
+            PurchaseSchemas.PurchaseRequest
+        };
+    };
+    internal porttype PurchaseSuccessResponseSendPortType
+    {
+        oneway SendSuccess
+        {
+            PurchaseSchemas.PurchaseResponse
+        };
+    };
+    internal porttype PurchaseErrorResponseSendPortType
+    {
+        oneway SendError
+        {
+            PurchaseSchemas.ErrorSchema
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service PurchaseOrchestartion
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements PurchaseRequestRecievePortType PurchaseRequestRecievePort;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses PurchaseErrorResponseSendPortType PurchaseErrorResponseSendPort;
+        message PurchaseSchemas.PurchaseRequest PurchaseRequestMessage;
+        message PurchaseSchemas.PurchaseResponse PurchaseResponseMessage;
+        message PurchaseSchemas.ErrorSchema PurchaseErrorMessage;
+        Error validationError;
+        PurchaseHelper.PurchaseRequestValidator purchaseRequestValidator;
+        body ()
+        {
+            validationError = new Error();
+            purchaseRequestValidator = new PurchaseHelper.PurchaseRequestValidator();
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("1572b6a2-61cc-479c-9abd-ff39d1d68036")]
+            receive (PurchaseRequestRecievePort.Recieve, PurchaseRequestMessage);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("81effad4-48ae-4b01-a4ec-6d7af74e6b7e")]
+            validationError = purchaseRequestValidator.Validate(PurchaseRequestMessage);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a609cb4d-debd-46c2-9276-c3622a869786")]
+            if (validationError != null)
+            {
+
+#error "No Called Orchestration."
+            }
+            else 
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("4d44e1e7-2d67-4123-a567-6369e75fbbe2")]
+                send (PurchaseErrorResponseSendPort.SendError, PurchaseErrorMessage);
+            }
+        }
+    }
+}
+

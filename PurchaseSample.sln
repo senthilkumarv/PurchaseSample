@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurchaseSchemas", "Purchase
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurchaseOrchestrations", "PurchaseOrchestrations\PurchaseOrchestrations.btproj", "{6B0394F6-7346-4C86-B1EC-9BB7080AC81F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurchaseLibrary", "PurchaseLibrary\PurchaseLibrary.csproj", "{01AD5D34-2AE8-4A3C-B180-B5F98F0C58AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurchaseHelper", "PurchaseLibrary\PurchaseHelper.csproj", "{01AD5D34-2AE8-4A3C-B180-B5F98F0C58AE}"
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PurchaseExternalServices", "PurchaseExternalServices\", "{8F91187B-42E2-4CAB-90B1-13051968052A}"
 	ProjectSection(WebsiteProperties) = preProject

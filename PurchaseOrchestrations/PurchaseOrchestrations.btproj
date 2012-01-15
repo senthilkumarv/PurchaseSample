@@ -71,6 +71,26 @@
   <ItemGroup>
     <None Include="PurchaseSample.snk" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PurchaseLibrary\PurchaseHelper.csproj">
+      <Project>{01AD5D34-2AE8-4A3C-B180-B5F98F0C58AE}</Project>
+      <Name>PurchaseHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PurchaseMaps\PurchaseMaps.btproj">
+      <Project>{59643EF1-1670-41A4-BDBA-E111A6403DB2}</Project>
+      <Name>PurchaseMaps</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PurchaseSchemas\PurchaseSchemas.btproj">
+      <Project>{06C7D1B6-02F1-4BDE-9027-E808DD6C98F3}</Project>
+      <Name>PurchaseSchemas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="PurchaseOrchestartion.odx">
+      <TypeName>PurchaseOrchestartion</TypeName>
+      <Namespace>PurchaseOrchestrations</Namespace>
+    </XLang>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
 </Project>
