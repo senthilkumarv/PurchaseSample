@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurchaseSchemas", "PurchaseSchemas\PurchaseSchemas.btproj", "{06C7D1B6-02F1-4BDE-9027-E808DD6C98F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurchaseOrchestrations", "PurchaseOrchestrations\PurchaseOrchestrations.btproj", "{6B0394F6-7346-4C86-B1EC-9BB7080AC81F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurchaseLibrary", "PurchaseLibrary\PurchaseLibrary.csproj", "{01AD5D34-2AE8-4A3C-B180-B5F98F0C58AE}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PurchaseExternalServices", "PurchaseExternalServices\", "{8F91187B-42E2-4CAB-90B1-13051968052A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/PurchaseExternalServices"
+		Debug.AspNetCompiler.PhysicalPath = "PurchaseExternalServices\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\PurchaseExternalServices\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/PurchaseExternalServices"
+		Release.AspNetCompiler.PhysicalPath = "PurchaseExternalServices\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\PurchaseExternalServices\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "28233"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06C7D1B6-02F1-4BDE-9027-E808DD6C98F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06C7D1B6-02F1-4BDE-9027-E808DD6C98F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06C7D1B6-02F1-4BDE-9027-E808DD6C98F3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{06C7D1B6-02F1-4BDE-9027-E808DD6C98F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06C7D1B6-02F1-4BDE-9027-E808DD6C98F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06C7D1B6-02F1-4BDE-9027-E808DD6C98F3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6B0394F6-7346-4C86-B1EC-9BB7080AC81F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B0394F6-7346-4C86-B1EC-9BB7080AC81F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B0394F6-7346-4C86-B1EC-9BB7080AC81F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6B0394F6-7346-4C86-B1EC-9BB7080AC81F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B0394F6-7346-4C86-B1EC-9BB7080AC81F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B0394F6-7346-4C86-B1EC-9BB7080AC81F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{01AD5D34-2AE8-4A3C-B180-B5F98F0C58AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01AD5D34-2AE8-4A3C-B180-B5F98F0C58AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01AD5D34-2AE8-4A3C-B180-B5F98F0C58AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01AD5D34-2AE8-4A3C-B180-B5F98F0C58AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F91187B-42E2-4CAB-90B1-13051968052A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F91187B-42E2-4CAB-90B1-13051968052A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F91187B-42E2-4CAB-90B1-13051968052A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F91187B-42E2-4CAB-90B1-13051968052A}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

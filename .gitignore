@@ -1,0 +1,4 @@
+*.suo
+_ReSharper.PurchaseSample
+*/bin
+*/obj
