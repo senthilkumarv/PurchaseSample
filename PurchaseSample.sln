@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurchaseMaps", "PurchaseMap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurchaseExternalServices", "PurchaseExternalServices\PurchaseExternalServices.csproj", "{533C5067-43F3-4180-A9C5-44420BF097B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfClient", "WcfClient\WcfClient.csproj", "{54190E09-9342-4F50-B0F4-DF99D3864879}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,16 @@ Global
 		{533C5067-43F3-4180-A9C5-44420BF097B6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{533C5067-43F3-4180-A9C5-44420BF097B6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{533C5067-43F3-4180-A9C5-44420BF097B6}.Release|x86.ActiveCfg = Release|Any CPU
+		{54190E09-9342-4F50-B0F4-DF99D3864879}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{54190E09-9342-4F50-B0F4-DF99D3864879}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{54190E09-9342-4F50-B0F4-DF99D3864879}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{54190E09-9342-4F50-B0F4-DF99D3864879}.Debug|x86.ActiveCfg = Debug|x86
+		{54190E09-9342-4F50-B0F4-DF99D3864879}.Debug|x86.Build.0 = Debug|x86
+		{54190E09-9342-4F50-B0F4-DF99D3864879}.Release|Any CPU.ActiveCfg = Release|x86
+		{54190E09-9342-4F50-B0F4-DF99D3864879}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{54190E09-9342-4F50-B0F4-DF99D3864879}.Release|Mixed Platforms.Build.0 = Release|x86
+		{54190E09-9342-4F50-B0F4-DF99D3864879}.Release|x86.ActiveCfg = Release|x86
+		{54190E09-9342-4F50-B0F4-DF99D3864879}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

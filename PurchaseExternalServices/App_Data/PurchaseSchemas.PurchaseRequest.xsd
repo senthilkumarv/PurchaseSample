@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xs:schema xmlns="http://PurchaseFlow.Schemas.PurchaseRequest" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://PurchaseFlow.Schemas.PurchaseRequest" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PurchaseRequest" type="PurchaseRequest">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="PurchaseRequest">
+    <xs:sequence>
+      <xs:element name="customerId" type="xs:unsignedInt" />
+      <xs:element name="productId" type="xs:unsignedInt" />
+      <xs:element name="quantity" type="xs:unsignedInt" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
