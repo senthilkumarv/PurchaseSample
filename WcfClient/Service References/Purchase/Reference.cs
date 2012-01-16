@@ -15,10 +15,10 @@ namespace WcfClient.Purchase {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="Purchase.PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort")]
     public interface PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort {
         
-        // CODEGEN: Generating message contract since the operation Operation_1 is neither RPC nor document wrapped.
-        [System.ServiceModel.OperationContractAttribute(Action="Operation_1", ReplyAction="*")]
+        // CODEGEN: Generating message contract since the operation MakePurchase is neither RPC nor document wrapped.
+        [System.ServiceModel.OperationContractAttribute(Action="MakePurchase", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        WcfClient.Purchase.Operation_1Response Operation_1(WcfClient.Purchase.Operation_1Request request);
+        WcfClient.Purchase.MakePurchaseResponse MakePurchase(WcfClient.Purchase.MakePurchaseRequest request);
     }
     
     /// <remarks/>
@@ -81,19 +81,70 @@ namespace WcfClient.Purchase {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.233")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://PurchaseFlowSchemas.ErrorSchema")]
+    public partial class Error : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string codeField;
+        
+        private string messageField;
+        
+        public Error() {
+            this.codeField = "-";
+            this.messageField = "-";
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string Code {
+            get {
+                return this.codeField;
+            }
+            set {
+                this.codeField = value;
+                this.RaisePropertyChanged("Code");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string Message {
+            get {
+                return this.messageField;
+            }
+            set {
+                this.messageField = value;
+                this.RaisePropertyChanged("Message");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class Operation_1Request {
+    public partial class MakePurchaseRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://PurchaseFlow.Schemas.PurchaseRequest", Order=0)]
         public WcfClient.Purchase.PurchaseRequest PurchaseRequest;
         
-        public Operation_1Request() {
+        public MakePurchaseRequest() {
         }
         
-        public Operation_1Request(WcfClient.Purchase.PurchaseRequest PurchaseRequest) {
+        public MakePurchaseRequest(WcfClient.Purchase.PurchaseRequest PurchaseRequest) {
             this.PurchaseRequest = PurchaseRequest;
         }
     }
@@ -102,16 +153,16 @@ namespace WcfClient.Purchase {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class Operation_1Response {
+    public partial class MakePurchaseResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://PurchaseFlow.Schemas.PurchaseRequest", Order=0)]
-        public WcfClient.Purchase.PurchaseRequest PurchaseRequest;
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://PurchaseFlowSchemas.ErrorSchema", Order=0)]
+        public WcfClient.Purchase.Error Error;
         
-        public Operation_1Response() {
+        public MakePurchaseResponse() {
         }
         
-        public Operation_1Response(WcfClient.Purchase.PurchaseRequest PurchaseRequest) {
-            this.PurchaseRequest = PurchaseRequest;
+        public MakePurchaseResponse(WcfClient.Purchase.Error Error) {
+            this.Error = Error;
         }
     }
     
@@ -143,15 +194,15 @@ namespace WcfClient.Purchase {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WcfClient.Purchase.Operation_1Response WcfClient.Purchase.PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort.Operation_1(WcfClient.Purchase.Operation_1Request request) {
-            return base.Channel.Operation_1(request);
+        WcfClient.Purchase.MakePurchaseResponse WcfClient.Purchase.PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort.MakePurchase(WcfClient.Purchase.MakePurchaseRequest request) {
+            return base.Channel.MakePurchase(request);
         }
         
-        public void Operation_1(ref WcfClient.Purchase.PurchaseRequest PurchaseRequest) {
-            WcfClient.Purchase.Operation_1Request inValue = new WcfClient.Purchase.Operation_1Request();
+        public WcfClient.Purchase.Error MakePurchase(WcfClient.Purchase.PurchaseRequest PurchaseRequest) {
+            WcfClient.Purchase.MakePurchaseRequest inValue = new WcfClient.Purchase.MakePurchaseRequest();
             inValue.PurchaseRequest = PurchaseRequest;
-            WcfClient.Purchase.Operation_1Response retVal = ((WcfClient.Purchase.PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort)(this)).Operation_1(inValue);
-            PurchaseRequest = retVal.PurchaseRequest;
+            WcfClient.Purchase.MakePurchaseResponse retVal = ((WcfClient.Purchase.PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort)(this)).MakePurchase(inValue);
+            return retVal.Error;
         }
     }
 }

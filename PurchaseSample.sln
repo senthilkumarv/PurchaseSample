@@ -9,9 +9,33 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurchaseHelper", "PurchaseL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurchaseMaps", "PurchaseMaps\PurchaseMaps.btproj", "{59643EF1-1670-41A4-BDBA-E111A6403DB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurchaseExternalServices", "PurchaseExternalServices\PurchaseExternalServices.csproj", "{533C5067-43F3-4180-A9C5-44420BF097B6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfClient", "WcfClient\WcfClient.csproj", "{54190E09-9342-4F50-B0F4-DF99D3864879}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PurchaseExternalServices", "PurchaseExternalServices\", "{5FE83C16-FA10-4FA9-A40D-A87EAF5FC578}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/PurchaseExternalServices"
+		Debug.AspNetCompiler.PhysicalPath = "PurchaseExternalServices\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\PurchaseExternalServices\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.KeyFile = "PurchaseSample.snk"
+		Debug.AspNetCompiler.DelaySign = "false"
+		Debug.AspNetCompiler.AllowPartiallyTrustedCallers = "false"
+		Debug.AspNetCompiler.FixedNames = "true"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/PurchaseExternalServices"
+		Release.AspNetCompiler.PhysicalPath = "PurchaseExternalServices\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\PurchaseExternalServices\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.KeyFile = "PurchaseSample.snk"
+		Release.AspNetCompiler.DelaySign = "false"
+		Release.AspNetCompiler.AllowPartiallyTrustedCallers = "false"
+		Release.AspNetCompiler.FixedNames = "true"
+		Release.AspNetCompiler.Debug = "False"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,16 +99,6 @@ Global
 		{59643EF1-1670-41A4-BDBA-E111A6403DB2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{59643EF1-1670-41A4-BDBA-E111A6403DB2}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
 		{59643EF1-1670-41A4-BDBA-E111A6403DB2}.Release|x86.ActiveCfg = Release|Any CPU
-		{533C5067-43F3-4180-A9C5-44420BF097B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{533C5067-43F3-4180-A9C5-44420BF097B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{533C5067-43F3-4180-A9C5-44420BF097B6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{533C5067-43F3-4180-A9C5-44420BF097B6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{533C5067-43F3-4180-A9C5-44420BF097B6}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{533C5067-43F3-4180-A9C5-44420BF097B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{533C5067-43F3-4180-A9C5-44420BF097B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{533C5067-43F3-4180-A9C5-44420BF097B6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{533C5067-43F3-4180-A9C5-44420BF097B6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{533C5067-43F3-4180-A9C5-44420BF097B6}.Release|x86.ActiveCfg = Release|Any CPU
 		{54190E09-9342-4F50-B0F4-DF99D3864879}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{54190E09-9342-4F50-B0F4-DF99D3864879}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{54190E09-9342-4F50-B0F4-DF99D3864879}.Debug|Mixed Platforms.Build.0 = Debug|x86
@@ -95,6 +109,16 @@ Global
 		{54190E09-9342-4F50-B0F4-DF99D3864879}.Release|Mixed Platforms.Build.0 = Release|x86
 		{54190E09-9342-4F50-B0F4-DF99D3864879}.Release|x86.ActiveCfg = Release|x86
 		{54190E09-9342-4F50-B0F4-DF99D3864879}.Release|x86.Build.0 = Release|x86
+		{5FE83C16-FA10-4FA9-A40D-A87EAF5FC578}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FE83C16-FA10-4FA9-A40D-A87EAF5FC578}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FE83C16-FA10-4FA9-A40D-A87EAF5FC578}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5FE83C16-FA10-4FA9-A40D-A87EAF5FC578}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5FE83C16-FA10-4FA9-A40D-A87EAF5FC578}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5FE83C16-FA10-4FA9-A40D-A87EAF5FC578}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FE83C16-FA10-4FA9-A40D-A87EAF5FC578}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{5FE83C16-FA10-4FA9-A40D-A87EAF5FC578}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5FE83C16-FA10-4FA9-A40D-A87EAF5FC578}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5FE83C16-FA10-4FA9-A40D-A87EAF5FC578}.Release|x86.ActiveCfg = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

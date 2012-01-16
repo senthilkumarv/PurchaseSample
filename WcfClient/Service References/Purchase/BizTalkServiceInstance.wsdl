@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BizTalkServiceInstance" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:documentation>
-    <CreationInfo Created="2012-01-16 14:24:47Z" />
+    <CreationInfo Created="2012-01-16 15:58:34Z" />
   </wsdl:documentation>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://senthilk.corporate.thoughtworks.com:80/PurchaseExternalServices/PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort.svc?xsd=xsd2" namespace="http://PurchaseFlow.Schemas.PurchaseRequest" />
+      <xsd:import schemaLocation="http://senthilk.corporate.thoughtworks.com:80/PurchaseExternalServices/PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort.svc?xsd=xsd3" namespace="http://PurchaseFlowSchemas.ErrorSchema" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort_Operation_1_InputMessage">
+  <wsdl:message name="PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort_MakePurchase_InputMessage">
     <wsdl:part xmlns:q1="http://PurchaseFlow.Schemas.PurchaseRequest" name="part" element="q1:PurchaseRequest" />
   </wsdl:message>
-  <wsdl:message name="PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort_Operation_1_OutputMessage">
-    <wsdl:part xmlns:q2="http://PurchaseFlow.Schemas.PurchaseRequest" name="part" element="q2:PurchaseRequest" />
+  <wsdl:message name="PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort_MakePurchase_OutputMessage">
+    <wsdl:part xmlns:q2="http://PurchaseFlowSchemas.ErrorSchema" name="part" element="q2:Error" />
   </wsdl:message>
   <wsdl:portType name="PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort">
     <wsdl:documentation>service "PurchaseOrchestrations.PurchaseOrchestartion" port "PurchasePort"</wsdl:documentation>
-    <wsdl:operation name="Operation_1">
-      <wsdl:documentation>operation "Operation_1"</wsdl:documentation>
-      <wsdl:input message="tns:PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort_Operation_1_InputMessage" />
-      <wsdl:output message="tns:PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort_Operation_1_OutputMessage" />
+    <wsdl:operation name="MakePurchase">
+      <wsdl:documentation>operation "MakePurchase"</wsdl:documentation>
+      <wsdl:input message="tns:PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort_MakePurchase_InputMessage" />
+      <wsdl:output message="tns:PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort_MakePurchase_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ITwoWayAsync" type="tns:PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="Operation_1">
-      <wsdl:documentation>operation "Operation_1"</wsdl:documentation>
-      <soap:operation soapAction="Operation_1" style="document" />
+    <wsdl:operation name="MakePurchase">
+      <wsdl:documentation>operation "MakePurchase"</wsdl:documentation>
+      <soap:operation soapAction="MakePurchase" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

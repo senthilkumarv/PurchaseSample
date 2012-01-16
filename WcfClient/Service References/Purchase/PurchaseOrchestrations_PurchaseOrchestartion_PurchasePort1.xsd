@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://PurchaseFlowSchemas.ErrorSchema" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://PurchaseFlowSchemas.ErrorSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Error">
+    <xs:annotation>
+      <xs:appinfo />
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element default="-" name="Code" type="xs:string" />
+        <xs:element default="-" name="Message" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

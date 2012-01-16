@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2fa2de3d-5c10-4e3f-b437-74dba2ba0f36" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="70efbdcc-24d5-41c6-b5d3-674d790f1278" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -18,11 +18,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://senthilk.corporate.thoughtworks.com/PurchaseExternalServices/PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost/PurchaseExternalServices/PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort.xsd" MetadataType="Schema" ID="d3ebee0e-4f97-411b-abac-8b63bbd24c8a" SourceId="1" SourceUrl="http://senthilk.corporate.thoughtworks.com/PurchaseExternalServices/PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort.svc?xsd=xsd2" />
-    <MetadataFile FileName="BizTalkServiceInstance.wsdl" MetadataType="Wsdl" ID="bd96bab9-d57f-4a6c-9466-5b40c9d89c57" SourceId="1" SourceUrl="http://senthilk.corporate.thoughtworks.com/PurchaseExternalServices/PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort.svc?wsdl" />
+    <MetadataFile FileName="PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort.disco" MetadataType="Disco" ID="7955b5dc-87ce-45fa-8541-b9bde29e0096" SourceId="1" SourceUrl="http://senthilk.corporate.thoughtworks.com/PurchaseExternalServices/PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort.svc?disco" />
+    <MetadataFile FileName="PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort.xsd" MetadataType="Schema" ID="f3f0288d-6dc0-4546-8b67-c7fc6fe0e9c4" SourceId="1" SourceUrl="http://senthilk.corporate.thoughtworks.com/PurchaseExternalServices/PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort.svc?xsd=xsd2" />
+    <MetadataFile FileName="BizTalkServiceInstance.wsdl" MetadataType="Wsdl" ID="06ed3d92-0963-4ad5-b504-3a85d1c96816" SourceId="1" SourceUrl="http://senthilk.corporate.thoughtworks.com/PurchaseExternalServices/PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort.svc?wsdl" />
+    <MetadataFile FileName="PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort1.xsd" MetadataType="Schema" ID="b7dcfac2-16d8-4807-83f4-169acef14dc6" SourceId="1" SourceUrl="http://senthilk.corporate.thoughtworks.com/PurchaseExternalServices/PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort.svc?xsd=xsd3" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

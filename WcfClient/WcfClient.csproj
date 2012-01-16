@@ -60,12 +60,16 @@
     <None Include="app.config" />
     <None Include="Service References\Purchase\BizTalkServiceInstance.wsdl" />
     <None Include="Service References\Purchase\PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort.xsd" />
-    <None Include="Service References\Purchase\WcfClient.Purchase.PurchaseRequest.datasource">
+    <None Include="Service References\Purchase\PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort1.xsd" />
+    <None Include="Service References\Purchase\WcfClient.Purchase.Error.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\Purchase\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Purchase\PurchaseOrchestrations_PurchaseOrchestartion_PurchasePort.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\Purchase\configuration91.svcinfo" />
