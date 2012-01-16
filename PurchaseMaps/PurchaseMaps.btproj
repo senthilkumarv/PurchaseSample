@@ -81,13 +81,13 @@
     </Map>
   </ItemGroup>
   <ItemGroup>
+    <None Include="PurchaseSample.snk" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\PurchaseSchemas\PurchaseSchemas.btproj">
       <Project>{06C7D1B6-02F1-4BDE-9027-E808DD6C98F3}</Project>
       <Name>PurchaseSchemas</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="PurchaseSample.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />

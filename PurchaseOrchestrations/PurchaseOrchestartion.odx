@@ -13,11 +13,6 @@
             <om:Property Name="ReportToAnalyst" Value="True" />
             <om:Property Name="Name" Value="PurchaseOrchestartion" />
             <om:Property Name="Signal" Value="True" />
-            <om:Element Type="LongRunningTransaction" OID="1b99a142-18f7-48f7-a451-339b5579a6dc" ParentLink="ServiceDeclaration_Transaction" LowerBound="26.21" HigherBound="26.67">
-                <om:Property Name="ReportToAnalyst" Value="True" />
-                <om:Property Name="Name" Value="Transaction_1" />
-                <om:Property Name="Signal" Value="False" />
-            </om:Element>
             <om:Element Type="VariableDeclaration" OID="8b022fa0-6527-4cea-8cfd-557fccdde9f6" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="34.1" HigherBound="35.1">
                 <om:Property Name="UseDefaultConstructor" Value="True" />
                 <om:Property Name="Type" Value="Error" />
@@ -25,6 +20,11 @@
                 <om:Property Name="ReportToAnalyst" Value="True" />
                 <om:Property Name="Name" Value="validationError" />
                 <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="LongRunningTransaction" OID="1b99a142-18f7-48f7-a451-339b5579a6dc" ParentLink="ServiceDeclaration_Transaction" LowerBound="26.21" HigherBound="26.67">
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Transaction_1" />
+                <om:Property Name="Signal" Value="False" />
             </om:Element>
             <om:Element Type="MessageDeclaration" OID="abc92c73-3bf3-4150-9a6d-b86b3a0196a4" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="32.1" HigherBound="33.1">
                 <om:Property Name="Type" Value="PurchaseSchemas.PurchaseRequest" />
@@ -90,11 +90,11 @@
                     <om:Property Name="Name" Value="Validation" />
                     <om:Property Name="Signal" Value="True" />
                     <om:Element Type="DecisionBranch" OID="ab547e0b-b024-4f7c-af2c-baf5b08a2ad5" ParentLink="ReallyComplexStatement_Branch" LowerBound="53.13" HigherBound="58.1">
-                        <om:Property Name="Expression" Value="validationError != null" />
+                        <om:Property Name="Expression" Value="validationError == null" />
                         <om:Property Name="IsGhostBranch" Value="True" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Name" Value="Valid" />
-                        <om:Property Name="Signal" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
                         <om:Element Type="Call" OID="db732b49-e4b2-4d5c-ba6e-10e36c8b120b" ParentLink="ComplexStatement_Statement" LowerBound="55.1" HigherBound="57.1">
                             <om:Property Name="Identifier" Value="CallOrchestration_1" />
                             <om:Property Name="Invokee" Value="PurchaseOrchestrations.ProcessPurchase" />
@@ -287,7 +287,7 @@ module PurchaseOrchestrations
                 }
             }
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("a609cb4d-debd-46c2-9276-c3622a869786")]
-            if (validationError != null)
+            if (validationError == null)
             {
                 [Microsoft.XLANGs.BaseTypes.DesignerPosition("db732b49-e4b2-4d5c-ba6e-10e36c8b120b")]
                 call PurchaseOrchestrations.ProcessPurchase (PurchaseRequestMessage) CallOrchestration_1;

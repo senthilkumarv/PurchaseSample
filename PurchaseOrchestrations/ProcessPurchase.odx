@@ -69,11 +69,11 @@
                     <om:Property Name="Name" Value="CheckAvailability" />
                     <om:Property Name="Signal" Value="True" />
                     <om:Element Type="DecisionBranch" OID="1f565614-9b34-45a6-8301-3fbdc19761e7" ParentLink="ReallyComplexStatement_Branch" LowerBound="31.13" HigherBound="36.1">
-                        <om:Property Name="Expression" Value="product.Availability &gt; 0" />
+                        <om:Property Name="Expression" Value="(product.Availability - PurchaseRequestMessage.quantity) &gt;= 0" />
                         <om:Property Name="IsGhostBranch" Value="True" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Name" Value="Available" />
-                        <om:Property Name="Signal" Value="False" />
+                        <om:Property Name="Signal" Value="True" />
                         <om:Element Type="Send" OID="bad24fb0-5643-4d09-b49a-11f696763985" ParentLink="ComplexStatement_Statement" LowerBound="33.1" HigherBound="35.1">
                             <om:Property Name="PortName" Value="MakePurchaseRequestPort" />
                             <om:Property Name="MessageName" Value="PurchaseRequestMessage" />
@@ -215,7 +215,7 @@ module PurchaseOrchestrations
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("b622f309-9ffc-4a89-b46d-63ebbe882a23")]
             product = repository.GetProduct(PurchaseRequestMessage.productId);
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("486042e2-33e2-4915-8ecb-c9a6818ea293")]
-            if (product.Availability > 0)
+            if ((product.Availability - PurchaseRequestMessage.quantity) >= 0)
             {
                 [Microsoft.XLANGs.BaseTypes.DesignerPosition("bad24fb0-5643-4d09-b49a-11f696763985")]
                 send (MakePurchaseRequestPort.MakePurchase, PurchaseRequestMessage);

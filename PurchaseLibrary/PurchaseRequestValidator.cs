@@ -12,7 +12,7 @@
         public Error Validate(PurchaseRequest request)
         {
             
-            if(purchaseRepository.IsValidCustomer(request.customerId))
+            if(!purchaseRepository.IsValidCustomer(request.customerId))
             {
                 return new Error
                     {
@@ -21,7 +21,7 @@
                     };
             }
             
-            if(purchaseRepository.IsValidProduct(request.productId))
+            if(!purchaseRepository.IsValidProduct(request.productId))
             {
                 return new Error
                            {

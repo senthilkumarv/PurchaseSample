@@ -6,19 +6,12 @@ namespace PurchaseHelper
 {
     public class PurchaseRepository
     {
+        private const string ConnectionString = "Data Source=localhost;Initial Catalog=PurchaseSampleDb;Integrated Security=True";
         public Product GetProduct(uint productId)
         {
-            var connection = new SqlConnection("");
-            var sqlCommand = new SqlCommand("SELECT ProductId, " +
-                                                "ProductName, " +
-                                                "Availability, " +
-                                                "Price, " +
-                                                "MaxDiscountPercentage " +
-                                            "FROM " +
-                                                "PRODUCTS " +
-                                            "WHERE " +
-                                            "   ProductID=@ProductId");
-            var sqlParameter = new SqlParameter("ProductId", productId);
+            var connection = new SqlConnection(ConnectionString);
+            var sqlCommand = new SqlCommand("SELECT ProductId, ProductName, Availability, Price, MaxDiscountPercentage FROM Products WHERE ProductID=@ProductId", connection);
+            var sqlParameter = new SqlParameter("ProductId", (int)productId);
             sqlCommand.Parameters.Add(sqlParameter);
             
             connection.Open();
@@ -31,22 +24,16 @@ namespace PurchaseHelper
                                   ProductName = sqlDataReader.GetString(1),
                                   Availability = sqlDataReader.GetInt32(2),
                                   Price = sqlDataReader.GetDecimal(3),
-                                  MaxDiscountPercentage = sqlDataReader.GetInt32(4)
+                                  MaxDiscountPercentage = sqlDataReader.GetDecimal(4)
                               };
             connection.Close();
             return product;
         }
         public Customer GetCustomer(uint customerId)
         {
-            var connection = new SqlConnection("");
-            var sqlCommand = new SqlCommand("SELECT CustomerID, " +
-                                                "CustomerName, " +
-                                                "Visits" +
-                                            "FROM " +
-                                                "CUSTOMERS " +
-                                            "WHERE " +
-                                                "CUSTOMERID=@CustomerId");
-            var sqlParameter = new SqlParameter("CustomerId", customerId);
+            var connection = new SqlConnection(ConnectionString);
+            var sqlCommand = new SqlCommand("SELECT CustomerID, CustomerName, Visits FROM Customers WHERE CustomerID=@CustomerId", connection);
+            var sqlParameter = new SqlParameter("CustomerId", (int)customerId);
             sqlCommand.Parameters.Add(sqlParameter);
             
             connection.Open();

@@ -1,0 +1,5 @@
+<ns0:PurchaseRequest xmlns:ns0="http://PurchaseFlow.Schemas.PurchaseRequest">
+  <customerId>1</customerId> 
+  <productId>4</productId> 
+  <quantity>10</quantity> 
+</ns0:PurchaseRequest>

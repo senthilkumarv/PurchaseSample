@@ -9,6 +9,6 @@ namespace PurchaseHelper
         public string ProductName { get; set; }
         public decimal Price { get; set; }
         public int Availability { get; set; }
-        public int MaxDiscountPercentage { get; set; }
+        public decimal MaxDiscountPercentage { get; set; }
     }
 }
