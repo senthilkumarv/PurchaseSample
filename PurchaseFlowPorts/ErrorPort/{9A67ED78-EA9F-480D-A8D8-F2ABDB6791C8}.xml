@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Error xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://PurchaseFlowSchemas.ErrorSchema">
+  <Code xmlns="">1003</Code>
+  <Message xmlns="">Product not available</Message>
+</Error>

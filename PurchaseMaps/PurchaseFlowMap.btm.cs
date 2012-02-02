@@ -1,9 +1,9 @@
 namespace PurchaseMaps {
     
     
-    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"PurchaseSchemas.PurchaseRequest", typeof(global::PurchaseSchemas.PurchaseRequest))]
-    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"PurchaseSchemas.PurchaseResponse", typeof(global::PurchaseSchemas.PurchaseResponse))]
-    public sealed class PurchaseFlowMap : global::Microsoft.XLANGs.BaseTypes.TransformBase {
+    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"PurchaseSchemas.PurchaseRequest", typeof(PurchaseSchemas.PurchaseRequest))]
+    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"PurchaseSchemas.PurchaseResponse", typeof(PurchaseSchemas.PurchaseResponse))]
+    public sealed class PurchaseFlowMap : Microsoft.XLANGs.BaseTypes.TransformBase {
         
         private const string _strMap = @"<?xml version=""1.0"" encoding=""UTF-16""?>
 <xsl:stylesheet xmlns:xsl=""http://www.w3.org/1999/XSL/Transform"" xmlns:msxsl=""urn:schemas-microsoft-com:xslt"" xmlns:var=""http://schemas.microsoft.com/BizTalk/2003/var"" exclude-result-prefixes=""msxsl var s0 ScriptNS0 userCSharp"" version=""1.0"" xmlns:s0=""http://PurchaseFlow.Schemas.PurchaseRequest"" xmlns:ns0=""http://PurchaseFlow.Schemas.PurchaseResponse"" xmlns:ScriptNS0=""http://schemas.microsoft.com/BizTalk/2003/ScriptNS0"" xmlns:userCSharp=""http://schemas.microsoft.com/BizTalk/2003/userCSharp"">
@@ -129,11 +129,11 @@ public bool ValToBool(string val)
         
         private const string _strSrcSchemasList0 = @"PurchaseSchemas.PurchaseRequest";
         
-        private const global::PurchaseSchemas.PurchaseRequest _srcSchemaTypeReference0 = null;
+        private const PurchaseSchemas.PurchaseRequest _srcSchemaTypeReference0 = null;
         
         private const string _strTrgSchemasList0 = @"PurchaseSchemas.PurchaseResponse";
         
-        private const global::PurchaseSchemas.PurchaseResponse _trgSchemaTypeReference0 = null;
+        private const PurchaseSchemas.PurchaseResponse _trgSchemaTypeReference0 = null;
         
         public override string XmlContent {
             get {

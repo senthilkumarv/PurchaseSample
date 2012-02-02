@@ -1,9 +1,9 @@
 namespace PurchaseMaps {
     
     
-    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"PurchaseSchemas.PurchaseRequest", typeof(global::PurchaseSchemas.PurchaseRequest))]
-    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"PurchaseSchemas.ErrorSchema", typeof(global::PurchaseSchemas.ErrorSchema))]
-    public sealed class PurchaseErrorMap : global::Microsoft.XLANGs.BaseTypes.TransformBase {
+    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"PurchaseSchemas.PurchaseRequest", typeof(PurchaseSchemas.PurchaseRequest))]
+    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"PurchaseSchemas.ErrorSchema", typeof(PurchaseSchemas.ErrorSchema))]
+    public sealed class PurchaseErrorMap : Microsoft.XLANGs.BaseTypes.TransformBase {
         
         private const string _strMap = @"<?xml version=""1.0"" encoding=""UTF-16""?>
 <xsl:stylesheet xmlns:xsl=""http://www.w3.org/1999/XSL/Transform"" xmlns:msxsl=""urn:schemas-microsoft-com:xslt"" xmlns:var=""http://schemas.microsoft.com/BizTalk/2003/var"" exclude-result-prefixes=""msxsl var s0 userCSharp"" version=""1.0"" xmlns:s0=""http://PurchaseFlow.Schemas.PurchaseRequest"" xmlns:ns0=""http://PurchaseFlowSchemas.ErrorSchema"" xmlns:userCSharp=""http://schemas.microsoft.com/BizTalk/2003/userCSharp"">
@@ -37,11 +37,11 @@ public string StringConcat(string param0)
         
         private const string _strSrcSchemasList0 = @"PurchaseSchemas.PurchaseRequest";
         
-        private const global::PurchaseSchemas.PurchaseRequest _srcSchemaTypeReference0 = null;
+        private const PurchaseSchemas.PurchaseRequest _srcSchemaTypeReference0 = null;
         
         private const string _strTrgSchemasList0 = @"PurchaseSchemas.ErrorSchema";
         
-        private const global::PurchaseSchemas.ErrorSchema _trgSchemaTypeReference0 = null;
+        private const PurchaseSchemas.ErrorSchema _trgSchemaTypeReference0 = null;
         
         public override string XmlContent {
             get {

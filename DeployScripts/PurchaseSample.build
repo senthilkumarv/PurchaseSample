@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="Fulfillment" basedir=".">
+	<target name="kill.suspended.instances">
+		<list-and-kill-instances assembly="PurchaseOrchestrations" expect-none="true" max-retry-attempts="10" failonerror="true"/>
+	</target>
+</project>
